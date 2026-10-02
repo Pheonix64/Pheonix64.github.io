@@ -1,0 +1,91 @@
+# ─── Site-wide content. Empty fields are simply not rendered. ───
+github_user: Pheonix64
+
+profile:
+  name: Sofiane Issoufou Issaka
+  title: Data & AI Engineer
+  tagline: >-
+    I build AI systems that run where infrastructure doesn't — on-device,
+    on-premise and offline — and I take them the last mile, to real users.
+  location: Dakar, Senegal
+  open_to: Open to opportunities in Morocco, Canada and Europe
+  email: ""          # TODO: add a public contact email
+  linkedin: ""       # TODO: full LinkedIn URL
+  cv_url: ""         # TODO: link to a PDF CV (e.g. cv.pdf placed in static/)
+
+about: >-
+  Engineer (Diplôme d'Ingénieur, ESMT Dakar, InDIA track) with experience across
+  central banking, development finance, telecoms and logistics. My focus is
+  last-mile deployment: models and data products that survive low connectivity,
+  limited hardware and non-technical users — with the documentation and
+  training that make adoption real.
+
+experience:
+  # dates left blank on purpose: fill them in, they render right-aligned.
+  - org: A.P. Møller – Maersk Senegal
+    role: Operational Excellence & BI (internship, West Africa)
+    dates: "2026 –"
+  - org: BCEAO
+    role: AI & data engineering — monetary policy support
+    dates: ""
+  - org: African Development Bank (Abidjan)
+    role: Data scientist
+    dates: ""
+  - org: Huawei Technologies Senegal
+    role: ""        # TODO
+    dates: ""
+  - org: DataDev Insights
+    role: ""        # TODO
+    dates: ""
+  - org: MAJS-TECH
+    role: Co-founder — drone-based computer vision
+    dates: ""
+
+education:
+  - school: ESMT Dakar
+    degree: Diplôme d'Ingénieur (Bac+5) — Data Engineering & Artificial Intelligence (InDIA)
+    detail: Graduated with highest honours (Très Bien), 2024
+  - school: EMIG Niamey
+    degree: DTS (Diplôme de Technicien Supérieur)
+    detail: Valedictorian (top of class)
+
+# Only skills evidenced by the projects below — extend as you see fit.
+skills:
+  AI / ML: [TensorFlow, scikit-learn, LangChain, RAG, on-device LLMs (LiteRT-LM), computer vision, MLflow]
+  Data engineering: [Python, SQL, PostgreSQL, PySpark, Airbyte, MinIO, Docker]
+  Backend: [FastAPI, Flask, MongoDB, Spring Boot]
+  BI & low-code: [Power BI (DAX), Power Apps, Power Automate, SharePoint]
+  Mobile: [Android (Java)]
+
+# Public repos never shown in the "All public repositories" list.
+exclude_repos:
+  - Pheonix64.github.io
+  - Phoenix64.github.io
+  - cours-git
+  - local-vers-distant
+  - learning-js
+  - admin
+  - git-devops-engineer
+  - Deep-Learning-Avec-Tensorflow
+  - gestionProduitMagasin
+
+# Readable names / English descriptions overriding the GitHub ones.
+repo_overrides:
+  text2sql-project:
+    description: Natural-language assistant that turns questions into SQL over economic databases (LangChain, FastAPI, PostgreSQL, Docker).
+  data-pipeline-poc:
+    description: Proof of concept of a modern data pipeline with Airbyte and MinIO.
+  CreditScorePlateFormeO:
+    description: API for a credit-scoring platform.
+  HypertensionWebApp:
+    description: Web app predicting cardiac risk from medical data (Random Forest, FastAPI, SQLite, Chart.js).
+  ML_With_Pyspark:
+    description: Hepatitis prediction from clinical parameters with PySpark MLlib.
+  Kidney_Disease_Classification_projects_mlflow:
+    description: Kidney disease classification with experiment tracking in MLflow.
+  restful_api_fastapi_mongodb:
+    description: RESTful book-management API with FastAPI and MongoDB Atlas.
+  flask_webApp:
+    description: Web application built with Flask.
+  AppMobileRechercheEmploies:
+    description: Android job-search app consuming a job-offers platform.

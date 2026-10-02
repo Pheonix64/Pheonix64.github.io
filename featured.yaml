@@ -1,0 +1,67 @@
+# ─── Featured projects (hand-curated, shown first) ───
+# Fields: title, kind, status, summary, problem, role, stack[], outcome, repo, link, confidential
+# - repo: name of a PUBLIC repo -> link + live stats are added automatically
+# - no repo -> card shows "Code not public"
+# - outcome: leave "" until you have a verifiable, shareable result. Never invent numbers.
+
+- title: GANYE — offline plant disease detection
+  kind: Personal project
+  status: In progress
+  summary: Mobile app that diagnoses crop diseases with no internet connection and explains the result in the farmer's language.
+  problem: Farmers in remote areas of Niger have neither connectivity nor easy access to agronomists when a disease hits their crops.
+  role: Product design, on-device ML architecture, 14-screen prototype.
+  stack: [Android, on-device CNN, local LLM, Hausa text-to-speech]
+  outcome: ""   # TODO: e.g. accuracy on held-out set, number of field testers
+  repo: ""
+
+- title: sci-memory — offline scientific literature explorer
+  kind: Personal project
+  status: Feasibility spike
+  summary: Android app to search and question a corpus of scientific papers fully offline, built for low-connectivity Sahel environments.
+  problem: Researchers and students in the Sahel lose access to literature whenever connectivity drops.
+  role: Concept, feasibility spike specification, gold-corpus evaluation protocol.
+  stack: [Android, Gemma 4 E2B, LiteRT-LM, RAG]
+  outcome: ""
+  repo: ""
+
+- title: Text-to-SQL assistant for economic data
+  kind: Open source
+  status: ""
+  summary: Ask questions about economic databases in plain language; the system writes and runs the SQL.
+  problem: Analysts without SQL skills depend on data teams for every ad-hoc question.
+  role: Design and full implementation.
+  stack: [Python, LangChain, FastAPI, PostgreSQL, Docker]
+  outcome: ""
+  repo: text2sql-project
+
+- title: Warehouse management system — UNICEF Cameroon
+  kind: Client project
+  status: In production development
+  summary: Low-code WMS covering receiving, multi-location put-away and stock tracking, on a SharePoint backend.
+  problem: Supply operations needed traceable stock by material, batch, purchase order, delivery and location.
+  role: Solution design and development across all modules.
+  stack: [Power Apps, SharePoint, Power Automate]
+  outcome: ""
+  repo: ""
+  confidential: true
+
+- title: Operational Excellence & BI suite — Maersk West Africa
+  kind: Professional
+  status: ""
+  summary: Canvas apps, automated weekly business reviews and KPI reporting for operational-excellence programs across West Africa.
+  problem: Continuous-improvement programs relied on manual reporting and scattered validation steps.
+  role: Redesigned a 31-screen operations app, built a Lean/Kaizen validation app, and rebuilt a reporting flow that removed a quadratic API-call bottleneck.
+  stack: [Power Apps, Power Automate, Office Scripts, Power BI]
+  outcome: ""
+  repo: ""
+  confidential: true
+
+- title: MAJS-TECH — drone-based computer vision
+  kind: Co-founded startup
+  status: ""
+  summary: Drone imagery and computer vision for agriculture and health use cases in West Africa.
+  problem: ""   # TODO
+  role: Co-founder.
+  stack: [Computer vision, drones]
+  outcome: ""
+  repo: ""

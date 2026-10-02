@@ -1,0 +1,20 @@
+[
+{"name":"text2sql-project","description":null,"language":"Python","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2025-12-25T00:00:00Z","homepage":""},
+{"name":"data-pipeline-poc","description":"build data pipeline using airbyte, minio, etc","language":null,"fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2025-12-01T00:00:00Z","homepage":""},
+{"name":"forecast_aen","description":null,"language":null,"fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2025-08-29T00:00:00Z","homepage":""},
+{"name":"HypertensionWebApp","description":null,"language":"Python","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2025-04-06T00:00:00Z","homepage":""},
+{"name":"Android-SqliteDBProject","description":null,"language":"Jupyter Notebook","fork":true,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2024-10-19T00:00:00Z","homepage":""},
+{"name":"git-devops-engineer","description":null,"language":null,"fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2024-07-18T00:00:00Z","homepage":""},
+{"name":"learning-js","description":null,"language":"HTML","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2024-07-13T00:00:00Z","homepage":""},
+{"name":"CreditScorePlateFormeO","description":"API de plateforme de score de crédit","language":"Python","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2024-05-09T00:00:00Z","homepage":""},
+{"name":"ML_With_Pyspark","description":"Predict if a patient is Hepatitis or not based on parameter by using pyspark","language":"Jupyter Notebook","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2024-03-29T00:00:00Z","homepage":""},
+{"name":"Kidney_Disease_Classification_projects_mlflow","description":"Kidney disease classification","language":"Python","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2024-03-26T00:00:00Z","homepage":""},
+{"name":"Deep-Learning-Avec-Tensorflow","description":null,"language":null,"fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2024-03-04T00:00:00Z","homepage":""},
+{"name":"restful_api_fastapi_mongodb","description":"Book management's RESTFUL API built with FastAPI and Mongodb atlas","language":null,"fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2023-08-11T00:00:00Z","homepage":""},
+{"name":"flask_webApp","description":"Create a web app with flask","language":"HTML","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2023-05-21T00:00:00Z","homepage":""},
+{"name":"AppMobileRechercheEmploies","description":"Application android de recherche d'emploie sur une plateforme d'offre","language":"Java","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2023-04-27T00:00:00Z","homepage":""},
+{"name":"gestionProduitMagasin","description":"Application web de gestion de chaussures d'un magasin de vent.","language":null,"fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2023-02-20T00:00:00Z","homepage":""},
+{"name":"admin","description":"tp sur spring boot","language":"Java","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2023-02-20T00:00:00Z","homepage":""},
+{"name":"local-vers-distant","description":null,"language":null,"fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2022-10-03T00:00:00Z","homepage":""},
+{"name":"cours-git","description":null,"language":"HTML","fork":false,"archived":false,"stargazers_count":0,"topics":[],"pushed_at":"2022-10-03T00:00:00Z","homepage":""}
+]

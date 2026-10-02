@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ p.name }} — {{ p.title }}</title>
+  <meta name="description" content="{{ p.tagline | trim }}">
+  <meta property="og:title" content="{{ p.name }} — {{ p.title }}">
+  <meta property="og:description" content="{{ p.tagline | trim }}">
+  <meta property="og:type" content="website">
+  <style>{{ css | safe }}</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="kicker">{{ p.title }}</p>
+    <h1>{{ p.name }}</h1>
+    <p class="tagline">{{ p.tagline }}</p>
+    <ul class="meta">
+      {% if p.location %}<li>{{ p.location }}</li>{% endif %}
+      {% if p.open_to %}<li>{{ p.open_to }}</li>{% endif %}
+    </ul>
+    <nav class="links" aria-label="Contact">
+      {% if p.email %}<a class="btn primary" href="mailto:{{ p.email }}">Email me</a>{% endif %}
+      <a class="btn{% if not p.email %} primary{% endif %}" href="https://github.com/{{ cfg.github_user }}">GitHub</a>
+      {% if p.linkedin %}<a class="btn" href="{{ p.linkedin }}">LinkedIn</a>{% endif %}
+      {% if p.cv_url %}<a class="btn" href="{{ p.cv_url }}">CV (PDF)</a>{% endif %}
+    </nav>
+  </div>
+</header>
+
+<main>
+  {% if cfg.about %}
+  <section id="about"><div class="wrap">
+    <h2>About</h2>
+    <p class="lead">{{ cfg.about }}</p>
+  </div></section>
+  {% endif %}
+
+  <section id="projects"><div class="wrap">
+    <h2>Selected work</h2>
+    <div class="grid">
+      {% for f in featured %}
+      <article class="card">
+        <div class="badges">
+          {% if f.kind %}<span class="badge">{{ f.kind }}</span>{% endif %}
+          {% if f.status %}<span class="badge">{{ f.status }}</span>{% endif %}
+          {% if f.confidential %}<span class="badge warn">Confidential — details on request</span>{% endif %}
+        </div>
+        <h3>{{ f.title }}</h3>
+        {% if f.summary %}<p>{{ f.summary }}</p>{% endif %}
+        <dl>
+          {% if f.problem %}<div><dt>Problem. </dt><dd>{{ f.problem }}</dd></div>{% endif %}
+          {% if f.role %}<div><dt>My role. </dt><dd>{{ f.role }}</dd></div>{% endif %}
+          {% if f.outcome %}<div><dt>Outcome. </dt><dd>{{ f.outcome }}</dd></div>{% endif %}
+        </dl>
+        {% if f.stack %}<ul class="tags">{% for s in f.stack %}<li>{{ s }}</li>{% endfor %}</ul>{% endif %}
+        <div class="foot">
+          {% if f.gh %}
+            <a href="{{ f.gh.url }}">View code on GitHub →</a>
+            <span>Updated {{ f.gh.updated }}</span>
+          {% elif f.link %}
+            <a href="{{ f.link }}">Learn more →</a>
+          {% else %}
+            <span>Code not public</span>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div></section>
+
+  {% if cfg.experience %}
+  <section id="experience"><div class="wrap">
+    <h2>Experience</h2>
+    <ul class="rows">
+      {% for e in cfg.experience %}
+      <li><div class="what"><strong>{{ e.org }}</strong>{% if e.role %}<span>{{ e.role }}</span>{% endif %}</div>{% if e.dates %}<time>{{ e.dates }}</time>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div></section>
+  {% endif %}
+
+  {% if cfg.education %}
+  <section id="education"><div class="wrap">
+    <h2>Education</h2>
+    <ul class="rows">
+      {% for e in cfg.education %}
+      <li><div class="what"><strong>{{ e.degree }}</strong><span>{{ e.school }}{% if e.detail %} · {{ e.detail }}{% endif %}</span></div></li>
+      {% endfor %}
+    </ul>
+  </div></section>
+  {% endif %}
+
+  {% if cfg.skills %}
+  <section id="skills"><div class="wrap">
+    <h2>Skills</h2>
+    <dl class="skills">
+      {% for cat, items in cfg.skills.items() %}
+      <div><dt>{{ cat }}</dt><dd><ul class="tags">{% for s in items %}<li>{{ s }}</li>{% endfor %}</ul></dd></div>
+      {% endfor %}
+    </dl>
+  </div></section>
+  {% endif %}
+
+  {% if repos %}
+  <section id="repos"><div class="wrap">
+    <h2>All public repositories</h2>
+    {% if languages | length > 1 %}
+    <div class="filters" role="group" aria-label="Filter by language" hidden>
+      <button type="button" data-lang="" aria-pressed="true">All</button>
+      {% for l in languages %}<button type="button" data-lang="{{ l }}" aria-pressed="false">{{ l }}</button>{% endfor %}
+    </div>
+    {% endif %}
+    <div id="repo-list">
+      {% for r in repos %}
+      <a class="repo" href="{{ r.url }}" data-lang="{{ r.language }}">
+        <div class="rname">{{ r.name }}</div>
+        {% if r.description %}<p class="rdesc">{{ r.description }}</p>{% endif %}
+        <div class="rmeta">
+          {% if r.language %}<span>{{ r.language }}</span>{% endif %}
+          {% if r.stars %}<span>★ {{ r.stars }}</span>{% endif %}
+          <span>Updated {{ r.updated }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div></section>
+  {% endif %}
+</main>
+
+<footer><div class="wrap">
+  Built from <a href="https://github.com/{{ cfg.github_user }}">github.com/{{ cfg.github_user }}</a> · last updated {{ built }}
+</div></footer>
+
+<script>
+/* Progressive enhancement: the list works without JS; filters appear only when JS runs. */
+(() => {
+  const bar = document.querySelector('.filters');
+  if (!bar) return;
+  bar.hidden = false;
+  const items = document.querySelectorAll('#repo-list .repo');
+  bar.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    bar.querySelectorAll('button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    const lang = b.dataset.lang;
+    items.forEach(i => { i.hidden = !!lang && i.dataset.lang !== lang; });
+  });
+})();
+</script>
+</body>
+</html>
